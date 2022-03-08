@@ -40,3 +40,18 @@ canvas.addEventListener("mousedown",function(e){
 });
 canvas.addEventListener("mouseup",()=>isDown=false);
 canvas.addEventListener("mouseout",()=>isDown=false);
+canvas.addEventListener("touchstart", function(e){
+    isDown=true;
+    [lastX,lastY]=[e.offsetX,e.offsetY];
+    return draw;
+});
+canvas.addEventListener("touchmove", function(e){
+    isDown=true;
+    [lastX,lastY]=[e.offsetX,e.offsetY];
+    return draw;
+});
+canvas.addEventListener("touchend", function(e){
+    isDown=true;
+    [lastX,lastY]=[e.offsetX,e.offsetY];
+    return draw;
+});
